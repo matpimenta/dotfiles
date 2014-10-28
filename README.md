@@ -1,12 +1,6 @@
-Install Pathogen
+Install Vundle
 
-	mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
-
-Add new module
-
-	git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
+	git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 Install links
 
