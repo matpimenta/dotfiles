@@ -83,4 +83,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+PATH=$PATH:~/tools/gradle-2.1/bin
+export GOPATH="/usr/share/go/"
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
