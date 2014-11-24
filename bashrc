@@ -83,7 +83,12 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Fix vim split window with C-s
+stty start undef stop undef
+
 PATH=$PATH:~/tools/gradle-2.1/bin
-export GOPATH="/usr/share/go/"
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export NODEJSPATH="$HOME/tools/nodejs"
+export GOPATH="$HOME/workspaces/goeg"
+export GOROOT="/usr/lib/go"
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$NODEJSPATH/bin
 
