@@ -14,6 +14,9 @@ set expandtab
 set t_ut=
 set listchars=eol:$,tab:>-
 
+" Syntax highlight
+syntax enable
+
 "" Set right margin
 " set colorcolumn=110
 " highlight ColorColumn ctermbg=darkgrey
