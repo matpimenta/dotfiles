@@ -16,3 +16,10 @@ Install Command-t
 Install links
 
 	./install.sh
+
+Install tern
+
+    cd ~/.vim/bundle/tern_for_vim
+    npm install 
+    cd node_modules/tern/plugin
+    wget https://raw.githubusercontent.com/Slava/tern-meteor/master/meteor.js    

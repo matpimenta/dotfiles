@@ -44,6 +44,7 @@ Plugin 'derekwyatt/vim-fswitch'
 Plugin 'fatih/vim-go'
 Plugin 'wincent/command-t'
 Plugin 'tfnico/vim-gradle'
+Plugin 'marijnh/tern_for_vim' 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
