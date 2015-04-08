@@ -90,5 +90,9 @@ PATH=$PATH:~/tools/gradle-2.1/bin
 export NODEJSPATH="$HOME/tools/nodejs"
 export GOPATH="$HOME/workspaces/goeg"
 export GOROOT="/usr/lib/go"
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$NODEJSPATH/bin
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin:$NODEJSPATH/bin:$HOME/google-cloud-sdk/bin
 
+
+
+export NVM_DIR="/home/matpimenta/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
