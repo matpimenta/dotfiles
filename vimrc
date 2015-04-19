@@ -54,6 +54,7 @@ Plugin 'vim-scripts/octave.vim--'
 Plugin 'Shougo/vimshell.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'elzr/vim-json'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -178,3 +179,5 @@ set wildignore+=**/node_modules/**,**/bower_components/**,**/node/**
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
+" Vim JSON
+let g:vim_json_syntax_conceal = 0
