@@ -1,5 +1,5 @@
 """"""""""""""""""""""""""""""""""""""""
-" Plugins 
+" Plugins
 """"""""""""""""""""""""""""""""""""""""
 
 " set the runtime path to include Vundle and initialize
@@ -73,19 +73,22 @@ filetype off                  " required
 filetype plugin on
 
 set omnifunc=syntaxcomplete#Complete
-if has("autocmd") && exists("+omnifunc")
-   autocmd Filetype octave
-   \ if &omnifunc == "" |
-   \ setlocal omnifunc=syntaxcomplete#Complete |
-   \ endif
-endif
+" if has("autocmd") && exists("+omnifunc")
+"    autocmd Filetype octave
+"    \ if &omnifunc == "" |
+"    \ setlocal omnifunc=syntaxcomplete#Complete |
+"    \ endif
+" endif
 
 " Disable Sounds
 set noerrorbells visualbell t_vb=
 
 " Set Colors / Theme
 set t_Co=256
+colors mustang
 let g:airline_theme = 'kolor'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " Tabs
 set showtabline=2
@@ -103,7 +106,6 @@ let g:ycm_goto_buffer_command = 'new-tab'
 
 " Synchronize vim clipboard with the OS
 set clipboard=unnamed
-colors mustang
 
 """"""""""""""""""""""""""""""""""""""""
 " Key Mapping
@@ -150,6 +152,8 @@ map <leader>v :set paste!<cr>
 
 " edit ~/.vimrc
 map <leader>ev :e! ~/.vimrc<cr>
+" edit ~/.tmux.conf
+map <leader>et :e! ~/.tmux.conf<cr>
 
 """"""""""""""""""""""""""""""""""""""""
 " File type configuration
