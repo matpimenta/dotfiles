@@ -32,7 +32,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 """"""""""""""""""""""""""""""""""""""""
-" General Configuration 
+" General Configuration
 """"""""""""""""""""""""""""""""""""""""
 
 " Auto reload configuration
