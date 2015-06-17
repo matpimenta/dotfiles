@@ -26,6 +26,11 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'elzr/vim-json'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'saltstack/salt-vim'
+Plugin 'ekalinin/Dockerfile.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -88,7 +93,7 @@ set t_Co=256
 colors mustang
 let g:airline_theme = 'kolor'
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 
 " Tabs
 set showtabline=2
@@ -115,7 +120,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-nnoremap <F5> :set hlsearch!<CR>
 
 " FuzzyFinder
 nmap ,f :FufFileWithCurrentBufferDir<CR>
@@ -125,6 +129,8 @@ nmap ,t :FufTaggedFile<CR>
 
 map <F3> :YcmCompleter GoTo<CR>
 map <F4> :FSHere<CR>
+nnoremap <F5> :set hlsearch!<CR>
+nmap <F6> :set wrap!<CR>
 nmap <F8> :TagbarToggle<CR>
 
 " Go-specific key bindings
@@ -134,11 +140,11 @@ au FileType go nmap <Leader>gd <Plug>(go-doc)
 au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
 au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>gc <Plug>(go-build)
 au FileType go nmap <leader>gt <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
-au FileType go nmap <Leader>dl <Plug>(go-def)
+au FileType go nmap <Leader>dd <Plug>(go-def)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 au FileType go nmap <Leader>e <Plug>(go-rename)
@@ -154,6 +160,22 @@ map <leader>v :set paste!<cr>
 map <leader>ev :e! ~/.vimrc<cr>
 " edit ~/.tmux.conf
 map <leader>et :e! ~/.tmux.conf<cr>
+" Flush Command-t 
+map <leader>ft :CommandTFlush<cr>
+" Close buffer 
+map <leader>w :bd<cr>
+
+" Split horizontally and vertically 
+map <leader>\| :vsplit<cr>
+map <leader>- :split<cr>
+
+" Reveal in NERDTree 
+map <leader>lf :NERDTreeFind<CR>
+
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
 """"""""""""""""""""""""""""""""""""""""
 " File type configuration
@@ -217,3 +239,5 @@ set wildignore+=**/node_modules/**,**/bower_components/**,**/node/**
 " Vim JSON
 let g:vim_json_syntax_conceal = 0
 
+" Markdown syntax
+let g:vim_markdown_folding_disabled=1
