@@ -31,6 +31,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'saltstack/salt-vim'
 Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'chrisbra/csv.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
