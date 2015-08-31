@@ -87,11 +87,18 @@ fi
 stty start undef stop undef
 
 ETCD=$HOME/tools/etcd-v2.0.10-linux-amd64
-PATH=$PATH:~/tools/gradle-2.1/bin:$ETCD:$GOROOT/bin:$GOPATH/bin:$NODEJSPATH/bin:$HOME/google-cloud-sdk/bin
+PATH=$PATH:~/tools/gradle-2.1/bin:$ETCD:$GOROOT/bin:$GOPATH/bin:$NODEJSPATH/bin:$HOME/google-cloud-sdk/bin:$HOME/tools/packer:$HOME/tools/terraform:$HOME/tools/ansible/bin
 export NODEJSPATH="$HOME/tools/nodejs"
 export GOPATH="$HOME/workspaces/goeg"
 export GOROOT="/usr/lib/go"
 export PATH=$PATH
 
+source ~/google-cloud-sdk/completion.zsh.inc
+source ~/google-cloud-sdk/path.zsh.inc
+
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 gvm use go1.4 > /dev/null
+
+export M2_HOME=/usr/share/maven3
+export M2=$M2_HOME/bin
+export PATH=$M2:$PATH

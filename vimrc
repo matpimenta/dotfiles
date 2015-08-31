@@ -32,6 +32,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'saltstack/salt-vim'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'chrisbra/csv.vim'
+Plugin 'chase/vim-ansible-yaml'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -113,6 +114,11 @@ let g:ycm_goto_buffer_command = 'new-tab'
 " Synchronize vim clipboard with the OS
 set clipboard=unnamed
 
+" Highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
+
 """"""""""""""""""""""""""""""""""""""""
 " Key Mapping
 """"""""""""""""""""""""""""""""""""""""
@@ -161,16 +167,16 @@ map <leader>v :set paste!<cr>
 map <leader>ev :e! ~/.vimrc<cr>
 " edit ~/.tmux.conf
 map <leader>et :e! ~/.tmux.conf<cr>
-" Flush Command-t 
+" Flush Command-t
 map <leader>ft :CommandTFlush<cr>
-" Close buffer 
+" Close buffer
 map <leader>w :bd<cr>
 
-" Split horizontally and vertically 
+" Split horizontally and vertically
 map <leader>\| :vsplit<cr>
 map <leader>- :split<cr>
 
-" Reveal in NERDTree 
+" Reveal in NERDTree
 map <leader>lf :NERDTreeFind<CR>
 
 noremap <Up> <NOP>
@@ -235,7 +241,7 @@ autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 
 " Command-T ignore node and bower folders
-set wildignore+=**/node_modules/**,**/bower_components/**,**/node/**
+set wildignore+=**/node_modules/**,**/bower_components/**,**/node/**,target/**
 
 " Vim JSON
 let g:vim_json_syntax_conceal = 0
