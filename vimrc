@@ -33,6 +33,7 @@ Plugin 'saltstack/salt-vim'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'chrisbra/csv.vim'
 Plugin 'chase/vim-ansible-yaml'
+Plugin 'vim-scripts/AutoComplPop'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -117,7 +118,7 @@ set clipboard=unnamed
 " Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
-
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 
 """"""""""""""""""""""""""""""""""""""""
 " Key Mapping
@@ -134,7 +135,7 @@ nmap ,n :FufFileWithFullCwd<CR>
 nmap ,b :FufBuffer<CR>
 nmap ,t :FufTaggedFile<CR>
 
-map <F3> :YcmCompleter GoTo<CR>
+map <F3> :YcmCompleter GoToDefinition<CR>
 map <F4> :FSHere<CR>
 nnoremap <F5> :set hlsearch!<CR>
 nmap <F6> :set wrap!<CR>
@@ -236,12 +237,14 @@ augroup END
 
 " Typescript
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
+"set rtp+=$HOME/.vim/bundle/typescript-tools.vim/
 
 " HTML
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 
 " Command-T ignore node and bower folders
 set wildignore+=**/node_modules/**,**/bower_components/**,**/node/**,target/**
+lef g:CommandTScanDotDirectories = 1
 
 " Vim JSON
 let g:vim_json_syntax_conceal = 0
