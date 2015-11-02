@@ -248,3 +248,7 @@ let g:vim_json_syntax_conceal = 0
 
 " Markdown syntax
 let g:vim_markdown_folding_disabled=1
+
+" CSV
+hi CSVColumnEven guifg=#e2e2e5 guibg=#202020 gui=none ctermfg=253 ctermbg=234
+hi CSVColumnOdd  guifg=#b1d631 gui=none ctermfg=148
