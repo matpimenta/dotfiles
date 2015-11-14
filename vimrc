@@ -51,7 +51,7 @@ set number
 set numberwidth=3
 
 "" Set tab size
-set smartindent
+set autoindent
 set tabstop=4
 set softtabstop=0
 set shiftwidth=4
@@ -59,6 +59,7 @@ set expandtab
 set t_ut=
 set listchars=eol:$,tab:>-
 set hlsearch
+set nowrap
 
 " Backup and swaps
 set nobackup
@@ -165,9 +166,9 @@ map <C-n> :NERDTreeToggle<CR>
 map <leader>v :set paste!<cr>
 
 " edit ~/.vimrc
-map <leader>ev :e! ~/.vimrc<cr>
+map <leader>ev :e ~/.vimrc<cr>
 " edit ~/.tmux.conf
-map <leader>et :e! ~/.tmux.conf<cr>
+map <leader>et :e ~/.tmux.conf<cr>
 " Flush Command-t
 map <leader>ft :CommandTFlush<cr>
 " Close buffer
@@ -228,6 +229,7 @@ let g:tagbar_type_go = {
 
 " Go
 au BufRead,BufNewFile *.go set filetype=go
+autocmd FileType go setlocal expandtab
 let g:go_fmt_autosave = 0
 
 " Octave
@@ -255,3 +257,6 @@ let g:vim_markdown_folding_disabled=1
 " CSV
 hi CSVColumnEven guifg=#e2e2e5 guibg=#202020 gui=none ctermfg=253 ctermbg=234
 hi CSVColumnOdd  guifg=#b1d631 gui=none ctermfg=148
+
+" Fugitive
+autocmd BufReadPost fugitive://* set bufhidden=delete

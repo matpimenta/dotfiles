@@ -97,7 +97,7 @@ source ~/google-cloud-sdk/completion.zsh.inc
 source ~/google-cloud-sdk/path.zsh.inc
 
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-gvm use go1.4 > /dev/null
+gvm use go1.5.1 > /dev/null
 
 export M2_HOME=/usr/share/maven3
 export M2=$M2_HOME/bin
