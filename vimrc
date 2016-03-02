@@ -11,7 +11,8 @@ Plugin 'vim-scripts/L9'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'derekwyatt/vim-fswitch'
@@ -34,6 +35,7 @@ Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'chrisbra/csv.vim'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'vim-scripts/AutoComplPop'
+Plugin 'Arkham/vim-quickfixdo'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -94,8 +96,9 @@ set noerrorbells visualbell t_vb=
 
 " Set Colors / Theme
 set t_Co=256
-colors mustang
-let g:airline_theme = 'kolor'
+"colors mustang
+colors monokai-chris
+let g:airline_theme = 'molokai'
 let g:airline_powerline_fonts = 1
 " let g:airline#extensions#tabline#enabled = 1
 
@@ -114,7 +117,7 @@ let g:ycm_confirm_extra_conf = 0
 let g:ycm_goto_buffer_command = 'new-tab'
 
 " Synchronize vim clipboard with the OS
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -158,6 +161,16 @@ au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 au FileType go nmap <Leader>e <Plug>(go-rename)
 au FileType go nmap <Leader>gi <Plug>(go-install)
+au FileType go nmap <Leader>gr <Plug>(go-referrers)
+au FileType go nmap <Leader>gl :GoLint<CR>
+
+" Fugitive
+nmap <leader>fs :Gstatus<cr>
+nmap <leader>fc :Gcommit<cr>
+nmap <leader>fa :Gwrite<cr>
+nmap <leader>fl :Glog<cr>
+nmap <leader>fd :Gdiff<cr>
+nmap <leader>fp :Gpush<cr>
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>

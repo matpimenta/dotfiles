@@ -101,4 +101,4 @@ gvm use go1.5.1 > /dev/null
 
 export M2_HOME=/usr/share/maven3
 export M2=$M2_HOME/bin
-export PATH=$M2:$PATH
+export PATH=$M2:$NODEJSPATH/bin:$PATH
