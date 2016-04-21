@@ -32,7 +32,6 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'saltstack/salt-vim'
 Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'chrisbra/csv.vim'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'Arkham/vim-quickfixdo'
@@ -117,7 +116,12 @@ let g:ycm_confirm_extra_conf = 0
 let g:ycm_goto_buffer_command = 'new-tab'
 
 " Synchronize vim clipboard with the OS
-set clipboard=unnamedplus
+let os = substitute(system('uname'), "\n", "", "")
+if os == "Darwin"
+    set clipboard=unnamed
+elseif os == "Linux"
+    set clipboard=unnamedplus
+endif
 
 " Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
