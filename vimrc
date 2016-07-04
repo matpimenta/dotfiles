@@ -249,6 +249,17 @@ au BufRead,BufNewFile *.go set filetype=go
 autocmd FileType go setlocal expandtab
 let g:go_fmt_autosave = 0
 
+" Python
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix |
+
+
 " Octave
 augroup filetypedetect
   au! BufRead,BufNewFile *.m,*.oct set filetype=octave
