@@ -35,6 +35,7 @@ Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'Arkham/vim-quickfixdo'
+Plugin 'antoyo/vim-licenses'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -154,9 +155,10 @@ au FileType go nmap <Leader>s <Plug>(go-implements)
 au FileType go nmap <Leader>i <Plug>(go-info)
 au FileType go nmap <Leader>gd <Plug>(go-doc)
 au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
-au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+"au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>gc <Plug>(go-build)
+au FileType go nmap <leader>gb <Plug>(go-test-compile)
 au FileType go nmap <leader>gt <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
@@ -288,3 +290,7 @@ hi CSVColumnOdd  guifg=#b1d631 gui=none ctermfg=148
 
 " Fugitive
 autocmd BufReadPost fugitive://* set bufhidden=delete
+
+" License Configuration
+let g:licenses_copyright_holders_name = 'Mateus Pimenta'
+let g:licenses_authors_name = 'Mateus Pimenta'
