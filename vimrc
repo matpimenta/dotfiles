@@ -36,6 +36,7 @@ Plugin 'chase/vim-ansible-yaml'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'Arkham/vim-quickfixdo'
 Plugin 'antoyo/vim-licenses'
+Plugin 'rodjek/vim-puppet'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -245,6 +246,9 @@ let g:tagbar_type_go = {
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
     \ }
+
+" Puppet
+au BufRead,BufNewFile *.pp set filetype=puppet
 
 " Go
 au BufRead,BufNewFile *.go set filetype=go
