@@ -37,6 +37,8 @@ Plugin 'vim-scripts/AutoComplPop'
 Plugin 'Arkham/vim-quickfixdo'
 Plugin 'antoyo/vim-licenses'
 Plugin 'rodjek/vim-puppet'
+Plugin 'vim-scripts/c.vim'
+Plugin 'JuliaLang/julia-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
