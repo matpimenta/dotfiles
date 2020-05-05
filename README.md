@@ -17,9 +17,18 @@ Install links
 
 	./install.sh
 
-Install tern
+Install tern (optional)
 
     cd ~/.vim/bundle/tern_for_vim
-    npm install 
+    npm install
     cd node_modules/tern/plugin
-    wget https://raw.githubusercontent.com/Slava/tern-meteor/master/meteor.js    
+    wget https://raw.githubusercontent.com/Slava/tern-meteor/master/meteor.js
+
+Install Powerlevel10k
+
+    https://github.com/romkatv/powerlevel10k
+
+Tmux Package Manager
+
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
