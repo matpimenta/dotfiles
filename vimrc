@@ -40,6 +40,8 @@ Plugin 'antoyo/vim-licenses'
 "Plugin 'vim-scripts/c.vim'
 "Plugin 'JuliaLang/julia-vim'
 Plugin 'rust-lang/rust.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'maxmellon/vim-jsx-pretty'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -301,3 +303,4 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 " License Configuration
 let g:licenses_copyright_holders_name = 'Mateus Pimenta'
 let g:licenses_authors_name = 'Mateus Pimenta'
+
