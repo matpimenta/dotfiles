@@ -84,21 +84,15 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # Fix vim split window with C-s
-stty start undef stop undef
-
-ETCD=$HOME/tools/etcd-v2.0.10-linux-amd64
-PATH=$PATH:~/tools/gradle-2.1/bin:$ETCD:$GOROOT/bin:$GOPATH/bin:$NODEJSPATH/bin:$HOME/google-cloud-sdk/bin:$HOME/tools/packer:$HOME/tools/terraform:$HOME/tools/ansible/bin
-export NODEJSPATH="$HOME/tools/nodejs"
-export GOPATH="$HOME/workspaces/goeg"
-export GOROOT="/usr/lib/go"
-export PATH=$PATH
+#stty start undef stop undef
 
 source ~/google-cloud-sdk/completion.zsh.inc
 source ~/google-cloud-sdk/path.zsh.inc
 
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-gvm use go1.5.1 > /dev/null
-
 export M2_HOME=/usr/share/maven3
 export M2=$M2_HOME/bin
-export PATH=$M2:$NODEJSPATH/bin:$PATH
+export GOROOT=/usr/lib/go-1.14
+export GOBIN=$HOME/go/bin
+export GOPATH=$HOME/go
+
+export PATH=$M2:$GOROOT/bin:$GOBIN:$GOPATH/bin:$HOME/google-cloud-sdk/bin:$PATH

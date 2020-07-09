@@ -10,14 +10,15 @@ call vundle#begin()
 Plugin 'vim-scripts/L9'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'derekwyatt/vim-fswitch'
 Plugin 'fatih/vim-go'
-Plugin 'wincent/command-t'
+"Plugin 'wincent/command-t'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tfnico/vim-gradle'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'majutsushi/tagbar'
@@ -90,12 +91,6 @@ filetype off                  " required
 filetype plugin on
 
 set omnifunc=syntaxcomplete#Complete
-" if has("autocmd") && exists("+omnifunc")
-"    autocmd Filetype octave
-"    \ if &omnifunc == "" |
-"    \ setlocal omnifunc=syntaxcomplete#Complete |
-"    \ endif
-" endif
 
 " Disable Sounds
 set noerrorbells visualbell t_vb=
@@ -144,12 +139,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" FuzzyFinder
-nmap ,f :FufFileWithCurrentBufferDir<CR>
-nmap ,n :FufFileWithFullCwd<CR>
-nmap ,b :FufBuffer<CR>
-nmap ,t :FufTaggedFile<CR>
-
 map <F3> :YcmCompleter GoToDefinition<CR>
 map <F4> :FSHere<CR>
 nnoremap <F5> :set hlsearch!<CR>
@@ -172,7 +161,7 @@ au FileType go nmap <Leader>dd <Plug>(go-def)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 au FileType go nmap <Leader>e <Plug>(go-rename)
-au FileType go nmap <Leader>gi <Plug>(go-install)
+au FileType go nmap <Leader>gi <Plug>(go-imports)
 au FileType go nmap <Leader>gr <Plug>(go-referrers)
 au FileType go nmap <Leader>gl :GoLint<CR>
 
@@ -196,6 +185,8 @@ map <leader>ev :e ~/.vimrc<cr>
 map <leader>et :e ~/.tmux.conf<cr>
 " Flush Command-t
 map <leader>ft :CommandTFlush<cr>
+" CtrlP 
+map <leader>t :CtrlP<cr>
 " Close buffer
 map <leader>w :bd<cr>
 
@@ -252,9 +243,6 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
     \ }
 
-" Puppet
-au BufRead,BufNewFile *.pp set filetype=puppet
-
 " Go
 au BufRead,BufNewFile *.go set filetype=go
 autocmd FileType go setlocal expandtab
@@ -286,6 +274,8 @@ autocmd Filetype html setlocal ts=2 sts=2 sw=2
 " Command-T ignore node and bower folders
 set wildignore+=**/node_modules/**,**/bower_components/**,**/node/**,target/**
 lef g:CommandTScanDotDirectories = 1
+
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|node_modules|)$'
 
 " Vim JSON
 let g:vim_json_syntax_conceal = 0
