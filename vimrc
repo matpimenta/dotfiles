@@ -7,32 +7,16 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
-Plugin 'vim-scripts/L9'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'vim-scripts/FuzzyFinder'
-Plugin 'derekwyatt/vim-fswitch'
+Plugin 'dracula/vim'
 Plugin 'fatih/vim-go'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tfnico/vim-gradle'
-Plugin 'marijnh/tern_for_vim'
 Plugin 'majutsushi/tagbar'
-Plugin 'Shougo/vimshell.vim'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'elzr/vim-json'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'vim-scripts/AutoComplPop'
 Plugin 'Arkham/vim-quickfixdo'
-Plugin 'antoyo/vim-licenses'
 Plugin 'rust-lang/rust.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'maxmellon/vim-jsx-pretty'
@@ -91,7 +75,8 @@ set noerrorbells visualbell t_vb=
 " Set Colors / Theme
 set t_Co=256
 "colors mustang
-colors monokai-chris
+"colors monokai-chris
+colorscheme dracula
 let g:airline_theme = 'molokai'
 let g:airline_powerline_fonts = 1
 " let g:airline#extensions#tabline#enabled = 1
