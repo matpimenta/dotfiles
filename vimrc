@@ -13,6 +13,8 @@ Plugin 'ycm-core/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'dracula/vim'
+Plugin 'tomasr/molokai'
+Plugin 'phanviet/vim-monokai-pro'
 Plugin 'fatih/vim-go'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
@@ -33,8 +35,9 @@ filetype plugin indent on    " required
 autocmd! bufwritepost .vimrc source %
 
 "" Add line numbers
-set number
+set number relativenumber
 set numberwidth=3
+set nu rnu
 
 "" Set tab size
 set autoindent
@@ -74,10 +77,13 @@ set noerrorbells visualbell t_vb=
 
 " Set Colors / Theme
 set t_Co=256
-"colors mustang
-"colors monokai-chris
-colorscheme dracula
-let g:airline_theme = 'molokai'
+set termguicolors
+colorscheme monokai_pro
+let g:lightline = {
+      \ 'colorscheme': 'monokai_pro',
+\ }
+
+"let g:airline_theme = 'molokai'
 let g:airline_powerline_fonts = 1
 " let g:airline#extensions#tabline#enabled = 1
 
