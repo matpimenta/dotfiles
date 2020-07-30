@@ -1,5 +1,8 @@
 echo ">>> Installing dependencies"
-sudo apt install zsh cmake tmux vim-gtk
+sudo apt update
+sudo apt upgrade -y
+sudo apt install -y zsh cmake tmux vim-gtk
+
 
 echo ">>> Installing Oh my Zsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
