@@ -86,8 +86,6 @@ fi
 # Fix vim split window with C-s
 #stty start undef stop undef
 
-source ~/google-cloud-sdk/completion.zsh.inc
-source ~/google-cloud-sdk/path.zsh.inc
 
 export M2_HOME=/usr/share/maven3
 export M2=$M2_HOME/bin
@@ -95,4 +93,4 @@ export GOROOT=/usr/lib/go-1.14
 export GOBIN=$HOME/go/bin
 export GOPATH=$HOME/go
 
-export PATH=$M2:$GOROOT/bin:$GOBIN:$GOPATH/bin:$HOME/google-cloud-sdk/bin:$PATH
+export PATH=$M2:$GOROOT/bin:$GOBIN:$GOPATH/bin:$PATH

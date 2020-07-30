@@ -1,7 +1,7 @@
 echo ">>> Installing dependencies"
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y zsh cmake tmux vim-gtk python3-dev build-essential
+sudo apt install -y zsh cmake tmux vim-gtk python3-dev build-essential golang-1.14-go
 
 ./install.sh
 
