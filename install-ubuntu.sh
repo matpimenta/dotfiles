@@ -1,7 +1,7 @@
 echo ">>> Installing dependencies"
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y zsh cmake tmux vim-gtk
+sudo apt install -y zsh cmake tmux vim-gtk python3-dev build-essential
 
 ./install.sh
 
