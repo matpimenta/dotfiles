@@ -5,13 +5,7 @@ Install Vundle
 Install YouCompleteMe
 
 	cd ~/.vim/bundle/YouCompleteMe
-	./install.sh --clang-completer
-
-Install Command-t
-
-    cd ~/.vim/bundle/command-t/ruby/command-t
-    ruby extconf.rb
-    make
+	./install.py --all
 
 Install links
 

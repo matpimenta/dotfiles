@@ -77,7 +77,7 @@ set noerrorbells visualbell t_vb=
 
 " Set Colors / Theme
 set t_Co=256
-set termguicolors
+"set termguicolors
 colorscheme monokai_pro
 let g:lightline = {
       \ 'colorscheme': 'monokai_pro',
